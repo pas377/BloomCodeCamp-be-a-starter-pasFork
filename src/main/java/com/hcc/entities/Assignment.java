@@ -9,6 +9,8 @@ public class Assignment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "name")
+    private String name;
     @Column(name = "status")
     private String status;
     @Column(name = "number")
@@ -33,6 +35,14 @@ public class Assignment {
         this.branch = branch;
         this.reviewVideoUrl = reviewVideoUrl;
         this.user = user;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Long getId() {

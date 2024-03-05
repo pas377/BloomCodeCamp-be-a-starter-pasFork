@@ -1,6 +1,6 @@
 package com.hcc.entities;
 
-import com.hcc.services.UserDetailServiceImpl;
+//import com.hcc.services.UserDetailServiceImpl;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -86,5 +86,17 @@ public class User implements UserDetails {
     @Override
     public String getPassword() {
         return password;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }
